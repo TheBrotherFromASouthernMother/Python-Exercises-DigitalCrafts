@@ -1,3 +1,5 @@
+userSpecifiedSize = int(input("Please select a size: "))
+
 def printSquareWithSpaces(size):
     for i in range (0, size):
         for j in range (0, size):
@@ -5,7 +7,7 @@ def printSquareWithSpaces(size):
         print(" ")
     
 
-printSquareWithSpaces(5)
+printSquareWithSpaces(userSpecifiedSize)
 
 
 
@@ -18,4 +20,4 @@ def printSquareWithoutSpaces(size):
         print(row)
 
 
-printSquareWithoutSpaces(5)
+printSquareWithoutSpaces(userSpecifiedSize)
