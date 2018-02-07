@@ -2,7 +2,6 @@ userString = str(input("Give me a string and I'll convert it to leet l337 speak:
 
 def makeLeetSpeak(string):
     modifiedString = ""
-    leetDict = [4,]
     for i in string:
         if i == "A":
             modifiedString += "4"
