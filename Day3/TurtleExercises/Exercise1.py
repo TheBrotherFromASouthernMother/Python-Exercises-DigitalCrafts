@@ -1,15 +1,23 @@
 from turtle import *
-
 shape("turtle")
 
-#draw a triangle
-# right(120)
-# forward(200)
-# right(120)
-# forward(200)
-# right(120)
-# forward(200)
 
+def drawTriangle(somefunction, direction):
+    somefunction(direction)
+    #draw a triangle
+    for i in range(3):
+        right(120)
+        forward(100)
+
+def drawStar(somefunction, direction):
+    somefunction(direction)
+    for i in range(6):
+        right(216)
+        forward(50)
+
+def drawSquare(someFunction, direction):
+    for i in range (4):
+        
 
 def setPosition(direction):
     direction = direction.lower()
@@ -20,6 +28,14 @@ def setPosition(direction):
     elif direction == 'right':
         penup()
         goto(200, -200)
+        down()
+    elif direction == "top-right":
+        penup()
+        goto(200, 200)
+        down()
+    elif direction == "top-left":
+        penup()
+        goto(-200, 200)
         down()
 
 
@@ -48,7 +64,10 @@ pentagon = drawPolygon(5, 30, "pentagon", True)
 
 octagon = drawPolygon(8, 30, "octagon", False, False, setPosition, "right" )
 
-#draw a hexagon
+star = drawStar(setPosition, "top-right")
+
+triangle = drawTriangle(setPosition, "top-left")
+
 hexagon = drawPolygon(6, 30, "hexagon",False, True, setPosition, "left")
 
 print("trueifthing")
@@ -56,5 +75,7 @@ print("trueifthing")
 if __name__ == "__main__":
     pentagon()
     octagon()
+    star()
+    triangle()
     hexagon()
         
