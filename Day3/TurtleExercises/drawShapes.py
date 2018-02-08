@@ -40,11 +40,21 @@ def drawShape(numberofSides, size, xcoord, ycoord, linecolor="black", fillstate=
 
     
 
-def drawStar(size, xcoord, ycoord):
+def drawStar(size, xcoord, ycoord, linecolor="black", fillstate=False):
     setPosition(xcoord, ycoord)
-    for i in range(6):
-        left(216)
-        forward(size)
+    color(linecolor)
+    if fillstate == True:
+        begin_fill()
+        for i in range(6):
+            forward(size)
+            left(216)
+        end_fill()
+    else:
+        for i in range(6):
+            forward(size)
+            left(216)
+
+   
 
 
 # drawShape(3, 60)
