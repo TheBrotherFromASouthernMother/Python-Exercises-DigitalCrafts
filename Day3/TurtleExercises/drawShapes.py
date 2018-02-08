@@ -1,25 +1,44 @@
 from turtle import *
 
 
-def drawCircle(xcoord, ycoord, wide =10, diameter=60, color="black"):
+def drawCircle(xcoord, ycoord, wide =10, size=60, linecolor="black", fillstate=False):
     setPosition(xcoord, ycoord)
-    pencolor(color)
     width(wide)
-    circle(diameter)
+    color(linecolor)
+    #begin_fill()  
+    if fillstate== True:
+        begin_fill()  
+        circle(size)
+        end_fill()
+    else:
+        circle(size)
+    
+   # end_fill()
 
 def setPosition(x, y):
     penup()
     goto(x, y)
     pendown()
 
-def drawShape(numberofSides, sideLength, xcoord, ycoord):
+def drawShape(numberofSides, size, xcoord, ycoord, linecolor="black", fillstate=False):
     setPosition(xcoord, ycoord)
     numSide = numberofSides #5
-    side_length = sideLength #70
+    side_length = size #70
     angle = 360 / numSide 
-    for i in range(numSide):
-        forward(side_length)
-        right(angle)
+    color(linecolor)
+    if fillstate == True:
+       begin_fill()
+       for i in range(numSide):
+            forward(side_length)
+            right(angle)
+       end_fill()
+    else:
+        for i in range(numSide):
+            forward(side_length)
+            right(angle)
+
+
+    
 
 def drawStar(size, xcoord, ycoord):
     setPosition(xcoord, ycoord)

@@ -1,5 +1,5 @@
 from turtle import *
-from drawPoly import *
+from drawShapes import *
 
 if __name__ == "__main__":
    drawShape(3, 60, 100, 100)
