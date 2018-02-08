@@ -14,5 +14,5 @@ def plotTemp(x):
     plot.plot(xs, ys, marker="o", markersize=5, color="blue")
     plot.show()
 
-
-plotTemp(degreesCelsius)
+if __name__ == "__main__":
+    plotTemp(degreesCelsius)

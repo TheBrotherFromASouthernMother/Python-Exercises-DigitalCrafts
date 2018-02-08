@@ -8,5 +8,5 @@ def wannaPlayAGame():
             while(userAnswer != "N" and userAnswer != "Y"):
                 userAnswer = str(input("INVALID INPUT TYPE(Y or N): ")).upper()
 
-
-wannaPlayAGame()
+if __name__ == "__main__":
+    wannaPlayAGame()

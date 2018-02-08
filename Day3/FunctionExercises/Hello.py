@@ -2,4 +2,7 @@
 def sayHello(name):
     print("Hello %s!" % name)
 
-sayHello("Christian")
+
+
+if __name__ == "__main__":
+    sayHello("Christian")

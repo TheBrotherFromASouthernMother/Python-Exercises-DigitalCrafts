@@ -9,4 +9,5 @@ def wannaPlayAGame():
                 userAnswer = str(input("Wanna play again?(Y or N) ")).upper()
 
 
-wannaPlayAGame()
+if __name__ == "__main__":
+    wannaPlayAGame()

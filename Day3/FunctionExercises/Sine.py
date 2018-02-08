@@ -14,5 +14,5 @@ def printPlots():
     plot.plot(xs, ys)
     plot.show()
     
-
-printPlots()
+if __name__ == "__main__":
+    printPlots()

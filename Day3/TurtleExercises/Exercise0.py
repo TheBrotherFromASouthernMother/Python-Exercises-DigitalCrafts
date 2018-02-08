@@ -1,12 +1,6 @@
 from turtle import *
 
-# forward(100)
-# right(90)
-# forward(100)
-# right(90)
-# forward(100)
-# right(90)
-# forward(100)
+shape("turtle")
 
 
 # for i in range(6):
@@ -21,27 +15,32 @@ from turtle import *
 # forward(50)
 # left(90)
 
-# pencolor('#005ce6')
-# width(20)
-# circle(160)
-# mainloop()
+def drawCirlce(wide=20, diameter=120 ):
+    pencolor('#005ce6')
+    width(wide)
+    circle(diameter)
 
-
-
-from turtle import *
 # move into position
-up()
-forward(50)
-left(90)
-forward(50)
-left(90)
-down()
-# draw the square
-forward(100)
-left(90)
-forward(100)
-left(90)
-forward(100)
-left(90)
-forward(100)
-mainloop()
+def position():
+    up()
+    forward(50)
+    left(90)
+    forward(50)
+    left(90)
+    down()
+
+def drawSquare():
+    # draw the square
+    forward(100)
+    left(90)
+    forward(100)
+    left(90)
+    forward(100)
+    left(90)
+    forward(100)
+
+if __name__ == "__main__":
+    drawCirlce()
+    mainloop()
+
+
