@@ -17,10 +17,31 @@ def drawCircle(xcoord, ycoord, wide =10, size=60, linecolor="black", fillstate=F
 
 def setPosition(x, y):
     penup()
+    home()
     goto(x, y)
     pendown()
 
+
+
 def drawShape(numberofSides, size, xcoord, ycoord, linecolor="black", fillstate=False):
+    setPosition(xcoord, ycoord)
+    numSide = numberofSides #5
+    side_length = size #70
+    angle = 360 / numSide 
+    color(linecolor)
+    if fillstate == True:
+       begin_fill()
+       for i in range(numSide):
+            forward(side_length)
+            left(angle)
+       end_fill()
+    else:
+        for i in range(numSide):
+            forward(side_length)
+            right(angle)
+
+
+def drawShapeInverted(numberofSides, size, xcoord, ycoord, linecolor="black", fillstate=False):
     setPosition(xcoord, ycoord)
     numSide = numberofSides #5
     side_length = size #70
@@ -36,7 +57,6 @@ def drawShape(numberofSides, size, xcoord, ycoord, linecolor="black", fillstate=
         for i in range(numSide):
             forward(side_length)
             right(angle)
-
 
     
 
@@ -55,6 +75,69 @@ def drawStar(size, xcoord, ycoord, linecolor="black", fillstate=False):
             left(216)
 
    
+
+def drawRhombus(size, xcoord, ycoord, linecolor="black", fillstate=False):
+    setPosition(xcoord, ycoord)
+    longside = 20 * size
+    sides = 12 * size
+    color(linecolor)
+    begin_fill()
+    forward(longside)
+    left(110)
+    forward(sides)
+    left(70)
+    forward(sides)
+    left(70)
+    forward(sides)
+    end_fill()
+
+
+def drawRhombusInverted(size, xcoord, ycoord, linecolor="black", fillstate=False):
+    setPosition(xcoord, ycoord)
+    longside = 20 * size
+    sides = 12 * size
+    color(linecolor)
+    begin_fill()
+    forward(longside)
+    right(110)
+    forward(sides)
+    right(70)
+    forward(sides)
+    right(70)
+    forward(sides)
+    end_fill()
+
+
+def drawParallelogram(size, xcoord, ycoord, linecolor="black", fillstate=False):
+    setPosition(xcoord, ycoord)
+    sides = 12 * size
+    color(linecolor)
+    begin_fill()
+    forward(sides)
+    left(110)
+    forward(sides)
+    left(70)
+    forward(sides)
+    left(110)
+    forward(sides)
+    end_fill()
+
+def drawParallelogramInverted(size, xcoord, ycoord, linecolor="black", fillstate=False):
+    setPosition(xcoord, ycoord)
+    sides = 12 * size
+    color(linecolor)
+    begin_fill()
+    forward(sides)
+    right(110)
+    forward(sides)
+    right(70)
+    forward(sides)
+    right(110)
+    forward(sides)
+    end_fill()
+
+
+
 
 
 # drawShape(3, 60)
