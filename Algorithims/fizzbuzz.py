@@ -49,8 +49,16 @@
 # fibValues()
 # print("Gha")
 
-sum = 0
-for i in range(1, 10):
-    for j in range(i, 10, i):
-        if j > 0:
-            print(j)
+def fib(n, n2, limit, arr):
+    if n + n2 >= limit:
+        return n + n2
+    else:
+        return 
+
+def printFib():
+    evenValsFib = [1, 2]
+
+
+
+
+
