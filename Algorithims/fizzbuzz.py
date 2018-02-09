@@ -61,4 +61,56 @@ def printFib():
 
 
 
+#2. Algo2
+def findMultiples(length):
+  sum = 0
+  for i in range(length):
+    if i % 5 == 0:
+      sum += i
+    elif i % 3 == 0:
+      sum += i
+  # print(sum)
+  return sum
 
+findMultiples(1000) # 233168
+
+#3. Algo3
+
+def fibonacci(limit):
+  sum = 0
+  nPrev = 0
+  n = 1
+  while n < limit:
+		nPrev = n
+    n = nPrev + n
+    if n % 2 == 0:
+      sum += n
+  return sum
+  
+  
+  
+#   sum += n
+#   print(n)
+#   if n >= limit:
+#     return sum
+#   else:
+#     return fibonacci(n+n, limit, sum)
+
+# def summingFunc():
+#   sum = fibonacci(1, 10, 0)
+#   print(sum)
+#   return sum
+
+# summingFunc()
+
+#4 Algo 4
+def findLargestPrimeFactor(number):
+  largestPrime = 2
+  for i in range(2, number+1):
+    if number % i == 0 and :
+      largestPrime = i
+      print(largestPrime)
+  
+  return largestPrime
+
+findLargestPrimeFactor(13195)   
