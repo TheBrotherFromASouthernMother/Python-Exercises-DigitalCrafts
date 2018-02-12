@@ -9,5 +9,5 @@ def letterSummary(word):
         
     
 
-
-letterSummary('banana')
+if __name__ == "__main__":
+    letterSummary('banana')

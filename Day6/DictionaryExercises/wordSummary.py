@@ -8,4 +8,7 @@ def wordSummary(phrase):
             wordSum[word] += 1
     print(wordSum)
 
-wordSummary("I came I saw I conquered.")
+
+
+if __name__ == "__main__":
+    wordSummary("I came I saw I conquered.")
