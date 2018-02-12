@@ -8,9 +8,9 @@ def letterSummary(word):
     print(sumChars)
     tally = list(sumChars.keys())
     firstPlace = tally[0]
-    for i in tally:
-        if sumChars[i] > sumChars[firstPlace]:
-            firstPlace = i
+    for j in tally:
+        if sumChars[j] > sumChars[firstPlace]:
+            firstPlace = j
 
     print('Top Result \"{}\" count: {}'.format(firstPlace,  sumChars[firstPlace]))
     return sumChars
