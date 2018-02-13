@@ -1,3 +1,10 @@
+#Phonebook App
+#Individual project in which the student must make a command line app that replicates a phonebook. 
+#The app must have a menu main that asks students to select between 5 options: looking up a contact, creating a contact,
+#deleting a contact, listing all contacts, and exiting. The app must also save state between uses so that if a user saves or 
+#deletes a contact, the app is aware of this the next time it boots up.
+
+
 import json
 import os.path
 
@@ -36,7 +43,7 @@ def saveEntry(dictionary):
         'name': name,
         "phone_number": phone_number
         }
-    print("Added entry:\n \'name: {}\nphone: {}\'\nto phonebook". \
+    print("Added entry:\n \'name: {}\nphone: {}\'\into phonebook". \
     format(dictionary[name]['name'], dictionary[name]['phone_number']), "\n\n")
 
 
@@ -44,6 +51,9 @@ def deleteEntry(dictionary):
     entryToDelete = str(input("Please input the contact name you would like to delete: "))
     if dictionary[entryToDelete]:
         del dictionary[entryToDelete]
+        print("Entry Deleted\n")
+    else:
+        print("Sorry contact not found. Usage: contact must be exact spelling and is case sensitive\n")
 
 
 
