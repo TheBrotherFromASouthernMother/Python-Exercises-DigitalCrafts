@@ -9,7 +9,7 @@ class Person:
         
 
     def greet(self, other_person):
-        print('Hello {}, I am {}!'.format(other_person.name, self.name))
+        print('Hello {}, I am {}!'.format(other_percson.name, self.name))
         self.greeting_count += 1
     
     def print_contact_info(self):
